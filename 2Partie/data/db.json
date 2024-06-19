@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": "admin",
+      "password": "MTIzNA==",
+      "roles": [
+        "USER",
+        "ADMIN"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjoxNTE2MjM5MDIyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0Ojg4ODgvYXV0aCIsIm5iZiI6MTUxNjIzOTAyMiwiZmlyc3RuYW1lIjoiYW5hcyIsImxhc3RuYW1lIjoiZXJyYW1pIiwiZW1haWwiOiJhbmFzQGdtYWlsLmNvbSIsInJvbGVzIjpbIlVTRVIiLCJBRE1JTiJdfQ.xKKTlCn6AzJHdsuPXL8q2XTt4_XIzRvkFLLNJcxw--8"
+    },
+    {
+      "id": "hmdi",
+      "password": " MTIzNA==",
+      "roles": [
+        "USER"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjoxNTE2MjM5MDIyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0Ojg4ODgvYXV0aCIsIm5iZiI6MTUxNjIzOTAyMiwiZmlyc3RuYW1lIjoiYW5hcyIsImxhc3RuYW1lIjoiZXJyYW1pIiwiZW1haWwiOiJhbmFzQGdtYWlsLmNvbSIsInJvbGVzIjpbIlVTRVIiXX0.zxhUcmlpdayhqFJAic5sfDs6ujWca2_Ohe7WV0KmSJo"
+    },
+    {
+      "id": "amine",
+      "password": "MTIzNA==",
+      "roles": [
+        "USER"
+      ],
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyMiIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjoxNTE2MjM5MDIyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0Ojg4ODgvYXV0aCIsIm5iZiI6MTUxNjIzOTAyMiwiZmlyc3RuYW1lIjoiYW5hcyIsImxhc3RuYW1lIjoiZXJyYW1pIiwiZW1haWwiOiJhbmFzQGdtYWlsLmNvbSIsInJvbGVzIjpbIlVTRVIiXX0.u91fDWOJY9CKcZORK_ObW0kLgkbh9OTCAgPg6EBWXik"
+    }
+  ],
+  "products": [
+    {
+      "name": "IPHONE",
+      "price": "700",
+      "checked": true,
+      "id": 1
+    },
+    {
+      "name": "LAPTOP",
+      "price": "2000",
+      "checked": false,
+      "id": 2
+    },
+    {
+      "name": "HEADPHON",
+      "price": "200",
+      "checked": false,
+      "id": 3
+    },
+    {
+      "name": "SMARTWATCH",
+      "price": "33",
+      "checked": false,
+      "id": 4
+    },
+    {
+      "name": "PS5",
+      "price": "33",
+      "checked": false,
+      "id": 5
+    }
+  ]
+}
