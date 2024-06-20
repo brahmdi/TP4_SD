@@ -1,0 +1,94 @@
+<div class="container">
+    <mat-card  class="login-form" [formGroup]="newPaymentForm">
+
+        <mat-card-header>
+            <mat-card-title>
+                New Payment
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content style="padding: 20px;">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Student Code</mat-label>
+                <input matInput  formControlName="studentCode">
+            </mat-form-field>
+
+
+
+            <mat-form-field appearance="outline">
+                <mat-label>Payment Date</mat-label>
+                <input matInput formControlName="date" [matDatepicker]="picker" placeholder="Choose a date">
+
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Amount</mat-label>
+                <input matInput  formControlName="amount">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-select formControlName="type">
+                    <mat-option *ngFor="let type of paymentTypes" [value]="type">
+                        {{type}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline">
+                <mat-label>File</mat-label>
+                <button type="button" mat-icon-button matPrefix (click)="f_input.click()">
+
+                    <mat-icon>attach_file</mat-icon>
+                </button>
+                <input matInput readonly   formControlName="fileName">
+                <input type="file" hidden #f_input (change)="selectFile($event)"
+                       accept="application/pdf">
+            </mat-form-field>
+
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="savePayment()">
+                    Save Payment
+                </button>
+                <mat-spinner *ngIf="showProgress"></mat-spinner>
+            </mat-card-actions>
+
+
+
+
+        </mat-card-content>
+
+    </mat-card>
+
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Payment File
+            </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+
+
+            <pdf-viewer
+                    [src]="pdfFileUrl"
+                    [original-size]="true"
+                    [render-text]="true"
+                    [rotation]="0"
+                    [show-all]="true"
+                    [fit-to-page]="true"
+                    [zoom]="1"
+                    [zoom-scale]="'page-width'"
+                    [external-link-target]="'blank'"
+                    [autoresize]="true"
+                    [show-borders]="false"
+                    class="pdf-viewer"
+                    (after-load-complete)="afterLoadComplete($event)"
+            ></pdf-viewer>
+
+        </mat-card-content>
+    </mat-card>
+</div>
